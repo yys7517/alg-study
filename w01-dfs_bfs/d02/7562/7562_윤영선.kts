@@ -11,7 +11,6 @@ fun main() {
     repeat(t) {
         val l = readLine()!!.toInt()
         val graph = Array(l) { IntArray(l) }
-        val visited = Array(l) { BooleanArray(l) }
 
         val (sx, sy) = readLine()!!.split(" ").map { it.toInt() }
         val (ex, ey) = readLine()!!.split(" ").map { it.toInt() }
@@ -29,7 +28,6 @@ fun main() {
             val queue = LinkedList<Point>()
 
             queue.add( sPoint )
-            visited[sPoint.x][sPoint.y] = true
 
             // 이동할 수 있는 경우의 수
             val dx = arrayOf(1,2,2,1,-1,-2,-1,-2)
@@ -41,7 +39,7 @@ fun main() {
                 val ty = tPoint.y
 
                 for(i in 0..7) {
-                    if(tx + dx[i] < 0 && ty + dy[i] < 0 && tx + dx[i] >= l && ty + dy[i] >= l) {
+                    if(tx + dx[i] < 0 || ty + dy[i] < 0 || tx + dx[i] >= l || ty + dy[i] >= l) {
                         // 체스판 범위를 벗어나는 경우면 스킵
                         continue
                     }
@@ -50,7 +48,7 @@ fun main() {
                     val dPoint = Point(tx + dx[i], ty + dy[i])
 
                     // 방문한 적이 없다면, 이동 횟수 기록
-                    if(graph[dPoint.x][dPoint.y] == 0 && !visited[dPoint.x][dPoint.y]) {
+                    if(graph[dPoint.x][dPoint.y] == 0) {
                         graph[dPoint.x][dPoint.y] = graph[tx][ty] + 1
 
                         if( dPoint == ePoint ) {
@@ -58,7 +56,6 @@ fun main() {
                             break
                         }
                         queue.add(dPoint)
-                        visited[dPoint.x][dPoint.y] = true
                     }
                 }
             }
