@@ -7,8 +7,7 @@ class Main {
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
         //TODO : 배열 만들어서 add
-        int size = Integer.parseInt(br.readLine());
-        int[] brr = new int[size];
+        int[] brr = new int[10001];
         String nextLine = br.readLine();
         while (nextLine != null) {
             brr[Integer.parseInt(nextLine)] += 1;
@@ -16,7 +15,7 @@ class Main {
         }
 
         //TODO : 배열 출력
-        for (int i = 0; i < size; i++) {
+        for (int i = 0; i < 10001; i++) {
             if (brr[i] != 0) {
                 for (int j = 0; j < brr[i]; j++) {
                     bw.write(String.valueOf(i) + '\n');
