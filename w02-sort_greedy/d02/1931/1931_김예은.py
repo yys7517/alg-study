@@ -34,6 +34,7 @@ def solution():
             possible_count+=1
             last_end_time = end
             
-    print(possible_count)
+    # print(possible_count)
+    return possible_count
   
 solution()
