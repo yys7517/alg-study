@@ -1,0 +1,10 @@
+{
+  // code-runner terminal 실행 설정
+  "code-runner.runInTerminal": true,
+
+  // 모든 파일 자동 저장
+  "files.autoSave": "afterDelay",
+
+  // 마지막 강제 개행
+  "files.insertFinalNewline": true
+}

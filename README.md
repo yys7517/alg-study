@@ -116,3 +116,15 @@ git checkout -b 1-1/1260
     - 지속적인 학습 리듬 유지를 목표로 합니다.
 
 > ‼️ 못 풀어도 괜찮습니다. 하지만 생각한 과정은 반드시 공유합니다.
+
+## 9. 자동화 스크립트 (2026.01.06 추가)
+- 본 스터디 레포지토리에서는 스터디 진행을 돕기 위한 자동화 스크립트를 제공합니다.
+- 각 스크립트는 `script/study/` 디렉토리에 위치해 있습니다.
+- 스크립트 실행은 VSCode 기준 터미널 또는 Code Runner 확장 프로그램(`formulahendry.code-runner`)을 통해 가능합니다.
+- Git 사용이 익숙하지 않은 사용자는 스크립트 사용을 권장합니다.
+- 각 스크립트 종류는 다음과 같습니다:
+    - `script/study/01_initialize_repository.sh` : 레포지토리 초기화 스크립트
+    - `script/study/02_before_study.sh` : 스터디 전 최산상태 동기화 스크립트
+    - `script/study/03_start_solve.sh` : 문제 풀이용 브랜치 생성 스크립트
+    - `script/study/04_submit_code.sh` : 문제 풀이 커밋 스크립트
+- 각 스크립트는 실행 전에 `chmod +x script/study/스크립트명.sh` 명령어로 실행 권한을 부여해야 할 수도 있습니다.
