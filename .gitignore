@@ -14,3 +14,9 @@
 !*.cpp
 !*.js
 !*.kts
+
+# 4. study용 스크립트 폴더 허용
+!/script/study/*.sh
+
+# 5. vscode settings.json 허용
+!/.vscode/settings.json
