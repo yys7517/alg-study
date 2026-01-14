@@ -78,7 +78,10 @@ fi
 # commit
 git commit -m "$COMMIT_MSG"
 
+# push upstream
+git push --set-upstream origin "$CURRENT_BRANCH"
+
 echo ""
-echo "✅ 커밋 완료"
+echo "✅ 커밋 및 푸시 완료"
 echo "👉 다음 단계: PR 생성"
 echo ""
